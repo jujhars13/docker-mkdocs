@@ -20,10 +20,11 @@ elif [[ -d $MKDOCS_HOME ]]; then
     MKDOCS_GID=$(ls -nd $MKDOCS_HOME | awk '{ print $4 }')
 
     # set up mkdocs user to have same user as owner of the bind mount
-    addgroup --gid $MKDOCS_GID $MKDOCS_USER &> /dev/null
-    adduser --uid $MKDOCS_UID --gid $MKDOCS_GID $MKDOCS_USER --home $MKDOCS_HOME --no-create-home --disabled-password --gecos '' &> /dev/null
+    #addgroup --gid $MKDOCS_GID $MKDOCS_USER &> /dev/null
+    #adduser --uid $MKDOCS_UID --gid $MKDOCS_GID $MKDOCS_USER --home $MKDOCS_HOME --no-create-home --disabled-password --gecos '' &> /dev/null
 
-    su - $MKDOCS_USER -c "cd $MKDOCS_HOME; mkdocs build"
+    #su - $MKDOCS_USER -c "cd $MKDOCS_HOME; mkdocs build"
+    cd $MKDOCS_HOME; mkdocs build
 else
     cat <<USAGE
 Docker mkdocs container.  This container has two modes of operation:
