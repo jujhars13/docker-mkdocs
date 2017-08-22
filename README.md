@@ -1,12 +1,13 @@
 # MkDocs in Docker with Bootswatch themes
 
 This repo contains instructions on how to build a docker image that will run
-[MkDocs](http://www.mkdocs.org/) to build your project docs, it also includes the MkDocs Bootswatch themes.
+[MkDocs](http://www.mkdocs.org/) to build your project docs, it also includes the MkDocs Bootswatch themes installed via pip.
 
 ## Docker registry
 
 This image is available on the [Docker registry](https://index.docker.io/) as
 [jujhars13/mkdocs](https://index.docker.io/u/jujhars13/mkdocs/) it's been forked from Nate Jones' [nate/mkdocs](https://index.docker.io/u/nate/mkdocs/) hard work.
+
 ## Running
 
 This docker container can be run in one of two ways.
